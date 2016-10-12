@@ -45,7 +45,7 @@ public class IpcService extends Service implements Invokable<Video, Integer> {
     public static final String EXTRA_PARAM_STRING = PACKAGE_NAME + ".extra.url";
     public static final String EXTRA_PACKAGE_NAME = PACKAGE_NAME + ".extra.package_name";
 
-    private Handler mHandler = new Handler();
+    private static final Handler mHandler = new Handler();
     private final IBinder mBinder = new LocalBinder();
     private static final AtomicInteger notificationId = new AtomicInteger();
     private static MediaChecker mMediaChecker;
